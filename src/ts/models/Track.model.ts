@@ -8,3 +8,8 @@ export interface Track {
   volume: number;
   color: string;
 }
+
+export interface ActiveTrack {
+  id: number;
+  audio: HTMLAudioElement
+}

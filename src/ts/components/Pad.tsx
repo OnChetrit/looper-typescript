@@ -1,9 +1,9 @@
-import { Toggle } from "./Toggle";
-import { Slider } from "./Slider";
-import { ReactComponent as Replace } from "../../assets/imgs/replace.svg";
-import { Track } from "../models/Track.model";
+import { Toggle } from './Toggle';
+import { Slider } from './Slider';
+import { ReactComponent as Replace } from '../../assets/imgs/replace.svg';
+import { Track } from '../models/Track.model';
 
-import "../../assets/styles/components/pad.scss";
+import '../../assets/styles/components/pad.scss';
 
 interface PadProp {
   track: Track;
@@ -18,7 +18,7 @@ export const Pad = ({ track }: PadProp) => {
     <div
       className="pad flex column br8"
       data-active={track.isActive}
-      style={{ backgroundColor: track.isActive ? `${track.color}` : "#444444" }}
+      style={{ backgroundColor: track.isActive ? `${track.color}` : '#444444' }}
     >
       <div className="top flex">
         <div className="icon flex align-center">
@@ -32,7 +32,7 @@ export const Pad = ({ track }: PadProp) => {
           <Toggle track={track} />
         </div>
       </div>
-      <Slider track={track} setVolume={setVolume} />
+      <Slider track={track} />
     </div>
   );
 };
